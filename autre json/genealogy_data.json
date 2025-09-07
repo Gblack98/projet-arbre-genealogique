@@ -1,0 +1,939 @@
+{
+    "personnes": [
+        {
+            "name": "Daro Wade",
+            "genre": "Femme",
+            "parents": [],
+            "enfants": [
+                "Fasseck Birame Lo"
+            ],
+            "conjoints": []
+        },
+        {
+            "name": "Fasseck Birame Lo",
+            "genre": "Femme",
+            "parents": ["Daro Wade"],
+            "enfants": [
+                "Birame Medor Diop"
+            ],
+            "conjoints": []
+        },
+        {
+            "name": "Birame Medor Diop",
+            "genre": "Homme",
+            "parents": ["Fasseck Birame Lo"],
+            "enfants": [
+                "Gabar Diop",
+                "Fatou Diop Diarra",
+                "Katy",
+                "Magne",
+                "Dieme Medor Dagana",
+                "Amadou Diop Bercy"
+            ],
+            "conjoints": []
+        },
+        {
+            "name": "Gabar Diop",
+            "genre": "Homme",
+            "parents": [
+                "Birame Medor Diop",
+                "Diarra Ba"
+            ],
+            "enfants": [
+                "Alioune Badara Gabar Diop",
+                "Bamba Gabar Diop",
+                "Ibrahima Gabar Diop",
+                "Doudou Yaye Katy Diop",
+                "Fatou Dia Mbacke Diop"
+            ],
+            "conjoints": ["Betty Ba"]
+        },
+        {
+            "name": "Diarra Ba",
+            "genre": "Femme",
+            "parents": [],
+            "enfants": [
+                "Gabar Diop",
+                "Fatou Diop Diarra",
+                "Diarra Diallo",
+                "Iba Diallo"
+            ],
+            "conjoints": ["Bilal Diallo"]
+        },
+        {
+            "name": "Bilal Diallo",
+            "genre": "Homme",
+            "parents": [],
+            "enfants": [
+                "Diarra Diallo",
+                "Iba Diallo"
+            ],
+            "conjoints": ["Diarra Ba"]
+        },
+        {
+            "name": "Fatou Diop Diarra",
+            "genre": "Femme",
+            "parents": ["Birame Medor Diop", "Diarra Ba"],
+            "enfants": [
+                "Mame Coumba Ndiaye", 
+                "Djiby Ndiaye", 
+                "Soce Ndiaye", 
+                "Ndeye Sylvie Sene", 
+                "El Hadji Malick Ndiaye"
+            ],
+            "conjoints": []
+        },
+        {
+            "name": "Iba Diallo",
+            "genre": "Homme",
+            "parents": [
+                "Diarra Ba",
+                "Bilal Diallo"
+            ],
+            "enfants": [
+                "Fatou Diallo",
+                "Moustapha Diallo",
+                "Mame Diarra Diallo Bineta Sarr",
+                "Souleymane Diallo"
+            ],
+            "conjoints": ["Binta Sarr"]
+        },
+        {
+            "name": "Bercy Ndack Ndir",
+            "genre": "Femme",
+            "parents": [],
+            "enfants": [
+                "Bakar Waly",
+                "Gabriel Birame Medor"
+            ],
+            "conjoints": []
+        },
+        {
+            "name": "Charles Medor Diop",
+            "genre": "Homme",
+            "parents": [],
+            "enfants": [
+                "Mamé Katy",
+                "Mamé Magne",
+                "Gabriel Birame Medor"
+            ],
+            "conjoints": ["Bercy Ndack Ndir","Marianne"]
+        },
+        {
+            "name": "Mamé Katy",
+            "genre": "Femme",
+            "parents": ["Charles Medor Diop","Marianne"],
+            "enfants": [
+                "Marie Étienne Jouga",
+                "Charles Lamine Sarr"
+            ],
+            "conjoints": ["Amadou Ndiaye Sarr"]
+        },
+	{
+            "name": "Mamé Magne",
+            "genre": "Femme",
+            "parents": ["Charles Medor Diop","Marianne"],
+            "enfants": [
+            ],
+            "conjoints": ["Amadou Ndiaye Sarr"]
+        },
+        {
+            "name": "Amadou Ndiaye Sarr",
+            "genre": "Homme",
+            "parents": [],
+            "enfants": [
+                "Charles Lamine Sarr"
+            ],
+            "conjoints": []
+        },
+        {
+            "name": "Marie Étienne Jouga",
+            "genre": "Femme",
+            "parents": ["Mamé Katy"],
+            "enfants": [
+                "Pierrot Medor Diop",
+                "Marie Louise Medor Diop",
+                "Doudou Medor Diop",
+                "Thérèse Medor Diop",
+                "Ryane Medor Diop"
+            ],
+            "conjoints": []
+        },
+        {
+            "name": "El Hadji Malick Ndiaye",
+            "genre": "Homme",
+            "parents": [
+                "Fatou Diop Diarra"
+            ],
+            "enfants": [
+                "Feu Papa Gabar Ndiaye",
+                "Feu Pape Charles",
+                "Djibril",
+                "Fatou Iba"
+            ],
+            "conjoints": ["Fatou Mbaye"]
+        },
+        {
+            "name": "Fatou Mbaye",
+            "genre": "Femme",
+            "parents": [],
+            "enfants": [
+                "Feu Papa Gabar Ndiaye",
+                "Feu Pape Charles",
+                "Djibril",
+                "Fatou Iba"
+            ],
+            "conjoints": ["El Hadji Malick Ndiaye"]
+        },
+        {
+            "name": "Feu Papa Gabar Ndiaye",
+            "genre": "Homme",
+            "parents": ["El Hadji Malick Ndiaye","Fatou Mbaye"],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Feu Pape Charles",
+            "genre": "Homme",
+            "parents": ["El Hadji Malick Ndiaye","Fatou Mbaye"],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Djibril",
+            "genre": "Homme",
+            "parents": ["El Hadji Malick Ndiaye","Fatou Mbaye"],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Fatou Iba",
+            "genre": "Femme",
+            "parents": ["El Hadji Malick Ndiaye","Fatou Mbaye"],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Fatou Diallo",
+            "genre": "Femme",
+            "parents": [
+                "Iba Diallo",
+                "Binta Sarr"
+            ],
+            "enfants": [
+                "Marième Ndiaye",
+                "Aissatou Ndiaye",
+                "Amadou Moustapha Ndiaye",
+                "Oulimata Ndiaye",
+                "Rosalie Ndiaye",
+                "Madiagne Ndiaye",
+                "Babacar Dieng",
+                "Baaye Dieng",
+                "Madicke Dieng"
+            ],
+            "conjoints": [
+            ]
+        },
+        {
+            "name": "Souleymane Ndiaye",
+            "genre": "Homme",
+            "parents": [],
+            "enfants": [ 
+                "Marième Ndiaye",
+                "Aissatou Ndiaye",
+                "Amadou Moustapha Ndiaye",
+                "Oulimata Ndiaye",
+                "Rosalie Ndiaye",
+                "Madiagne Ndiaye"
+            ],
+            "conjoints": []
+        },
+        {
+            "name": "Pape Thiaka Dieng",
+            "genre": "Homme",
+            "parents": [],
+            "enfants": [ 
+                "Babacar Dieng",
+                "Baaye Dieng",
+                "Madicke Dieng"
+            ],
+            "conjoints": []
+        },
+        {
+            "name": "Binta Sarr",
+            "genre": "Femme",
+            "parents": [],
+            "enfants": ["Fatou Diallo"],
+            "conjoints": ["Iba Diallo"]
+        },
+        {
+            "name": "Yatma Seck",
+            "genre": "Homme",
+            "parents": [
+                "Ndiogou Seck"
+            ],
+            "enfants": [
+                "Mar Seck",
+                "Malick Seck",
+                "Pathé Ndegg Seck",
+                "Ouleymatou Seck",
+                "Fary Seck"
+            ],
+            "conjoints": []
+        },
+        {
+            "name": "Ndiogou Seck",
+            "genre": "Homme",
+            "parents": [],
+            "enfants": ["Yatma Seck"],
+            "conjoints": []
+        },
+        {
+            "name": "Mar Seck",
+            "genre": "Homme",
+            "parents": [
+                "Yatma Seck"
+            ],
+            "enfants": [
+                "Binta Yama Seck",
+                "Nafissatou Seck",
+                "Aminta Seck",
+                "Mouhamadou Moustapha Seck",
+                "Pathé Seck",
+                "Penda Ndiaye Seck",
+                "Mame Aida Seck",
+                "Marième Seck",
+                "Fatou Seck",
+                "Moustapha Seck",
+                "Boubacar Seck",
+                "Aissatou Seck",
+                "Magette Seck",
+                "Warxa Seck",
+                "Maguette Seck"
+            ],
+            "conjoints": [
+                "Marième Ndiaye",
+                "Nafissatou Diop Attoumane",
+                "Maguette Fall Dagana",
+                "Courra Dièye Sarr"
+            ]
+        },
+        {
+            "name": "Marième Ndiaye",
+            "genre": "Femme",
+            "parents": [
+                "Fatou Diallo"
+            ],
+            "enfants": [
+                "Binta Yama Seck",
+                "Nafissatou Seck",
+                "Amineta Seck",
+                "Mouhamadou Moustapha Seck",
+                "Pathé Seck",
+                "Penda Ndiaye Seck",
+                "Mame Aida Seck"
+            ],
+            "conjoints": ["Mar Seck"]
+        },
+        {
+            "name": "Nafissatou Diop Attoumane",
+            "genre": "Femme",
+            "parents": [],
+            "enfants": [],
+            "conjoints": ["Mar Seck"]
+        },
+        {
+            "name": "Maguette Fall Dagana",
+            "genre": "Femme",
+            "parents": [],
+            "enfants": [],
+            "conjoints": ["Mar Seck"]
+        },
+        {
+            "name": "Courra Dièye Sarr",
+            "genre": "Femme",
+            "parents": [],
+            "enfants": [],
+            "conjoints": ["Mar Seck"]
+        },
+        {
+            "name": "Maguette Seck",
+            "genre": "Femme",
+            "parents": [],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Warxa Seck",
+            "genre": "Femme",
+            "parents": [],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Alioune Badara Gabar Diop",
+            "genre": "Homme",
+            "parents": [
+                "Gabar Diop","Betty Ba"
+            ],
+            "enfants": [
+                "Mame Diarra Diop",
+                "Ndeye Betty Diop",
+                "Amadou Diop",
+                "Amadou Bamba Diop (Fils de Badara)",
+                "Ndeye Salimata Diop",
+                "Seynabou Diop",
+                "Lissong Diop",
+                "Gabar Birame Medor Diop",
+                "Ibrahima Gabar Diop (fils de Badara)",
+                "Saliou Sady Faza Diop",
+                "El Hadji Malick Diop",
+                "Yacine Diop",
+                "Mouhamadou Lamine Diop"
+            ],
+            "conjoints": [
+                "Seynabou Ndoye",
+                "Fatou Cisse",
+                "Fatou Gaye"
+            ]
+        },
+        {
+            "name": "Seynabou Ndoye",
+            "genre": "Femme",
+            "parents": [],
+            "enfants": [
+		        "Mame Diarra Diop",
+                "Ndeye Betty Diop"
+            ],
+            "conjoints": ["Alioune Badara Gabar Diop"]
+        },
+        {
+            "name": "Fatou Cisse",
+            "genre": "Femme",
+            "parents": [],
+            "enfants": [
+            	"Amadou Diop",
+                "Amadou Bamba Diop (Fils de Badara)",
+                "Ndeye Salimata Diop",
+                "Seynabou Diop"
+                ],
+            "conjoints": ["Alioune Badara Gabar Diop"]
+        },
+        {
+            "name": "Fatou Gaye",
+            "genre": "Femme",
+            "parents": [],
+            "enfants": [
+           	    "Lissong Diop",
+                "Gabar Birame Medor Diop",
+                "Ibrahima Gabar Diop (fils de Badara)",
+                "Saliou Sady Faza Diop",
+                "El Hadji Malick Diop",
+                "Yacine Diop",
+                "Mouhamadou Lamine Diop"
+            ],
+            "conjoints": ["Alioune Badara Gabar Diop"]
+        },
+        {
+            "name": "Mame Diarra Diop",
+            "genre": "Femme",
+            "parents": [
+                "Alioune Badara Gabar Diop",
+                "Seynabou Ndoye"
+            ],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Ndeye Betty Diop",
+            "genre": "Femme",
+            "parents": [
+                "Alioune Badara Gabar Diop",
+                "Seynabou Ndoye"
+            ],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Amadou Diop",
+            "genre": "Homme",
+            "parents": [
+                "Alioune Badara Gabar Diop",
+                "Fatou Cisse"
+            ],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Amadou Bamba Diop (Fils de Badara)",
+            "genre": "Homme",
+            "parents": [
+                "Alioune Badara Gabar Diop",
+                "Fatou Cisse"
+            ],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Ndeye Salimata Diop",
+            "genre": "Femme",
+            "parents": [
+                "Alioune Badara Gabar Diop",
+                "Fatou Cisse"
+            ],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Seynabou Diop",
+            "genre": "Femme",
+            "parents": [
+                "Alioune Badara Gabar Diop",
+                "Fatou Cisse"
+            ],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Lissong Diop",
+            "genre": "Homme",
+            "parents": [
+                "Alioune Badara Gabar Diop",
+                "Fatou Gaye"
+            ],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Gabar Birame Medor Diop",
+            "genre": "Homme",
+            "parents": [
+                "Alioune Badara Gabar Diop",
+                "Fatou Gaye"
+            ],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Ibrahim Gabar Diop",
+            "genre": "Homme",
+            "parents": [
+                "Alioune Badara Gabar Diop",
+                "Fatou Gaye"
+            ],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Saliou Sady Faza Diop",
+            "genre": "Homme",
+            "parents": [
+                "Alioune Badara Gabar Diop",
+                "Fatou Gaye"
+            ],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "El Hadji Malick Diop",
+            "genre": "Homme",
+            "parents": [
+                "Alioune Badara Gabar Diop",
+                "Fatou Gaye"
+            ],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Yacine Diop",
+            "genre": "Femme",
+            "parents": [
+                "Alioune Badara Gabar Diop",
+                "Fatou Gaye"
+            ],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Mouhamadou Lamine Diop",
+            "genre": "Homme",
+            "parents": [
+                "Alioune Badara Gabar Diop",
+                "Fatou Gaye"
+            ],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Katy",
+            "genre": "Femme",
+            "parents": ["Birame Medor Diop"],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Magne",
+            "genre": "Femme",
+            "parents": ["Birame Medor Diop"],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Dieme Medor Dagana",
+            "genre": "Homme",
+            "parents": ["Birame Medor Diop"],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Amadou Diop Bercy",
+            "genre": "Homme",
+            "parents": ["Birame Medor Diop"],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Pierrot Medor Diop",
+            "genre": "Homme",
+            "parents": ["Marie Étienne Jouga"],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Marie Louise Medor Diop",
+            "genre": "Femme",
+            "parents": ["Marie Étienne Jouga"],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Doudou Medor Diop",
+            "genre": "Homme",
+            "parents": ["Marie Étienne Jouga"],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Thérèse Medor Diop",
+            "genre": "Femme",
+            "parents": ["Marie Étienne Jouga"],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Ryane Medor Diop",
+            "genre": "Homme",
+            "parents": ["Marie Étienne Jouga"],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Bakar Waly",
+            "genre": "Homme",
+            "parents": ["Bercy Ndack Ndir"],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Gabriel Birame Medor",
+            "genre": "Homme",
+            "parents": ["Bercy Ndack Ndir"],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Diarra Diallo",
+            "genre": "Femme",
+            "parents": ["Bilal Diallo"],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Mame Coumba Ndiaye",
+            "genre": "Femme",
+            "parents": ["Fatou Diop Diarra"],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Djiby Ndiaye",
+            "genre": "Homme",
+            "parents": ["Fatou Diop Diarra"],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Soce Ndiaye",
+            "genre": "Homme",
+            "parents": ["Fatou Diop Diarra"],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Ndeye Sylvie Sene",
+            "genre": "Femme",
+            "parents": ["Fatou Diop Diarra"],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Moustapha Diallo",
+            "genre": "Homme",
+            "parents": ["Iba Diallo"],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Mame Diarra Diallo Bineta Sarr",
+            "genre": "Femme",
+            "parents": ["Iba Diallo","Bineta Sarr"],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Souleymane Diallo",
+            "genre": "Homme",
+            "parents": ["Iba Diallo"],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Babacar Dieng",
+            "genre": "Homme",
+            "parents": [
+                "Fatou Diallo",
+                "Pape Thiaka Dieng"
+            ],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Baaye Dieng",
+            "genre": "Homme",
+            "parents": [
+                "Fatou Diallo",
+                "Pape Thiaka Dieng"
+            ],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Madicke Dieng",
+            "genre": "Homme",
+            "parents": [
+                "Fatou Diallo",
+                "Pape Thiaka Dieng"
+            ],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Malick Seck",
+            "genre": "Homme",
+            "parents": ["Yatma Seck"],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Pathé Ndegg Seck",
+            "genre": "Homme",
+            "parents": ["Yatma Seck"],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Ouleymatou Seck",
+            "genre": "Femme",
+            "parents": ["Yatma Seck"],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Fary Seck",
+            "genre": "Femme",
+            "parents": ["Yatma Seck"],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Marième Seck",
+            "genre": "Femme",
+            "parents": ["Mar Seck"],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Fatou Seck",
+            "genre": "Femme",
+            "parents": ["Mar Seck"],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Moustapha Seck",
+            "genre": "Homme",
+            "parents": ["Mar Seck"],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Boubacar Seck",
+            "genre": "Homme",
+            "parents": ["Mar Seck"],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Aissatou Seck",
+            "genre": "Femme",
+            "parents": ["Mar Seck"],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Binta Yama Seck",
+            "genre": "Femme",
+            "parents": ["Mar Seck","Marième Ndiaye"],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Nafissatou Seck",
+            "genre": "Femme",
+            "parents": ["Mar Seck","Marième Ndiaye"],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Amineta Seck",
+            "genre": "Femme",
+            "parents": ["Mar Seck","Marième Ndiaye"],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Mouhamadou Moustapha Seck",
+            "genre": "Homme",
+            "parents": ["Mar Seck","Marième Ndiaye"],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Pathé Seck",
+            "genre": "Homme",
+            "parents": ["Mar Seck","Marième Ndiaye"],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Penda Ndiaye Seck",
+            "genre": "Femme",
+            "parents": ["Mar Seck","Marième Ndiaye"],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Mame Aida Seck",
+            "genre": "Femme",
+            "parents": ["Mar Seck","Marième Ndiaye"],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Mame Coumba Diop",
+            "genre": "Femme",
+            "parents": ["Ibrahima Gabar Diop"],
+            "enfants": [],
+            "conjoints": []
+        },
+
+        {
+            "name": "Aida Gabar Diop",
+            "genre": "Femme",
+            "parents": ["Ibrahima Gabar Diop"],
+            "enfants": [],
+            "conjoints": []
+        },
+        
+          {
+            "name": "Betty Ba",
+            "genre": "Femme",
+            "parents": [],
+            "enfants": ["Alioune Badara Gabar Diop"],
+            "conjoints": ["Gabar Diop"]
+        },
+        {
+            "name": "Aminata Diop",
+            "genre": "Femme",
+            "parents": ["Ibrahima Gabar Diop"],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Soukeyna Diop",
+            "genre": "Femme",
+            "parents": ["Ibrahima Gabar Diop"],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Hady Diop",
+            "genre": "Homme",
+            "parents": ["Ibrahima Gabar Diop"],
+            "enfants": [],
+            "conjoints": []
+        },
+	{
+            "name": "Fatou Mbacke Diop",
+            "genre": "Femme",
+            "parents": ["Ibrahima Gabar Diop"],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Faty Dia Mbacke Diop",
+            "genre": "Femme",
+            "parents": ["Gabar Diop"],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Ibrahima Gabar Diop",
+            "genre": "Homme",
+            "parents": ["Gabar Diop"],
+            "enfants": [
+                        "Mame Coumba Diop", 
+                        "Aida Gabar Diop", 
+                        "Aminata Diop", 
+                        "Soukeyna Diop", 
+                        "Hady Diop", 
+                        "Fatou Mbacke Diop"
+                    ],
+            "conjoints": []
+        },
+        {
+            "name": "Amadou Bamba Diop",
+            "genre": "Homme",
+            "parents": ["Gabar Diop"],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Doudou Yaye Katy Diop",
+            "genre": "Homme",
+            "parents": ["Gabar Diop"],
+            "enfants": [],
+            "conjoints": []
+        },
+        {
+            "name": "Charles Lamine Sarr",
+            "genre": "Homme",
+            "parents": [
+                "Mamé Katy",
+                "Amadou Ndiaye Sarr"
+            ],
+            "enfants": [],
+            "conjoints": []
+        }
+    ]
+}
