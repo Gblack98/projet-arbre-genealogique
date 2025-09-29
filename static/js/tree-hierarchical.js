@@ -1,17 +1,25 @@
-import * as d3 from 'https://cdn.jsdelivr.net/npm/d3@7/+esm';
-import { getNodeColor, wrapText } from './utils.js';
-import { showPersonDetails } from './ui.js';
+// ==========================
+// Chargement initial
+// ==========================
+fetch("/api/hierarchical-tree")
+    .then(res => res.json())
+    .then(data => {
+        if (data && data.hierarchy && data.hierarchy.length > 0) {
+            drawHierarchicalTree(data.hierarchy);
+        } else {
+            console.warn("Aucune donnée hiérarchique trouvée. Vérifiez vos racines.");
+        }
+    })
+    .catch(err => console.error("Erreur au chargement initial :", err));
 
 // ==========================
 // Dessiner arbre hiérarchique
 // ==========================
-export function drawHierarchicalTree(data) {
+function drawHierarchicalTree(data) {
     if (!data || data.length === 0) return;
 
-    // Réinitialiser le groupe pour le dessin
-    const svg = d3.select("#tree-svg");
     svg.selectAll("*").remove();
-    const g = svg.append("g");
+    g = svg.append("g");
 
     const width = svg.node().clientWidth || 1200;
     const height = svg.node().clientHeight || 800;
@@ -136,3 +144,4 @@ export function drawHierarchicalTree(data) {
                  ${d.y},${d.x}`;
     }
 }
+

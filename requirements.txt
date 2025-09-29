@@ -1,2 +1,9 @@
-Flask==2.3.3
-Werkzeug==2.3.7
+# Core web framework
+flask==3.0.3
+
+# Production server
+gunicorn==21.2.0
+
+# Optional: gestion des variables d’environnement
+python-dotenv==1.0.1
+

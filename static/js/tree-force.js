@@ -1,20 +1,15 @@
-import * as d3 from 'https://cdn.jsdelivr.net/npm/d3@7/+esm';
-import { getNodeColor, wrapText } from './utils.js';
-import { showPersonDetails } from './ui.js';
+import { getNodeColor, wrapText } from './node-utils.js';
 
-// ==========================
-// Dessiner arbre force (ancêtres / descendants / complet)
-// ==========================
 export function drawForceTree(data) {
     if (!data || !data.nodes || !data.links) return;
 
     const svg = d3.select("#tree-svg");
     svg.selectAll("*").remove();
     const g = svg.append("g");
+
     const width = svg.node().clientWidth || 1200;
     const height = svg.node().clientHeight || 800;
 
-    // Définir les marqueurs de flèche
     if (g.select("#arrowhead-force").empty()) {
         svg.append("defs").append("marker")
             .attr("id", "arrowhead-force")
@@ -29,7 +24,6 @@ export function drawForceTree(data) {
             .attr("fill", "#666");
     }
 
-    // Simulation de force
     const simulation = d3.forceSimulation(data.nodes)
         .force("link", d3.forceLink(data.links).id(d => d.name).distance(150).strength(0.5))
         .force("charge", d3.forceManyBody().strength(-400))
@@ -38,7 +32,6 @@ export function drawForceTree(data) {
         .alphaDecay(0.05)
         .alphaMin(0.01);
 
-    // Liens : différencier parents et conjoints
     const link = g.selectAll(".link")
         .data(data.links)
         .enter().append("line")
@@ -48,7 +41,6 @@ export function drawForceTree(data) {
         .attr("stroke-dasharray", d => d.type === 'spouse' ? "5,5" : "none")
         .attr("marker-end", d => d.type === 'parent' ? "url(#arrowhead-force)" : "none");
 
-    // Noeuds
     const node = g.selectAll(".node")
         .data(data.nodes)
         .enter().append("g")
@@ -57,7 +49,7 @@ export function drawForceTree(data) {
             .on("start", dragstarted)
             .on("drag", dragged)
             .on("end", dragended))
-        .on("click", showPersonDetails)
+        .on("click", (event, d) => import('./info-panel.js').then(mod => mod.showPersonDetails(event, d)))
         .on("mouseenter", function(event, d) {
             d3.select(this).select("rect").transition().duration(200)
                 .attr("stroke", "#ff6b6b")
@@ -91,7 +83,7 @@ export function drawForceTree(data) {
         .attr("text-anchor", "middle")
         .attr("font-size", "14px")
         .attr("fill", "#333")
-        .text(d => d.name.length > 18 ? d.name.substring(0, 15) + "..." : d.name)
+        .text(d => d.name.length > 0 ? d.name : "")
         .call(wrapText, 130);
 
     simulation.on("tick", () => {
@@ -105,18 +97,12 @@ export function drawForceTree(data) {
 
     function dragstarted(event, d) {
         if (!event.active) simulation.alphaTarget(0.3).restart();
-        d.fx = d.x;
-        d.fy = d.y;
+        d.fx = d.x; d.fy = d.y;
     }
 
-    function dragged(event, d) {
-        d.fx = event.x;
-        d.fy = event.y;
-    }
-
+    function dragged(event, d) { d.fx = event.x; d.fy = event.y; }
     function dragended(event, d) {
         if (!event.active) simulation.alphaTarget(0);
-        d.fx = null;
-        d.fy = null;
+        d.fx = null; d.fy = null;
     }
 }

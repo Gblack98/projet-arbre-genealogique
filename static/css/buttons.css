@@ -1,0 +1,37 @@
+/* =======================
+   BUTTONS
+======================= */
+.btn {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 30px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Georgia', serif;
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, var(--heritage-brown), var(--deep-burgundy));
+  color: var(--ivory);
+  border: 2px solid var(--copper);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(139, 69, 19, 0.4);
+}
+
+.btn-secondary {
+  background: linear-gradient(45deg, var(--sage-green), #7A8471);
+  color: var(--ivory);
+  border: 2px solid var(--warm-gold);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+}
+

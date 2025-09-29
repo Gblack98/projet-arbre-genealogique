@@ -1,0 +1,26 @@
+/* =======================
+   FOOTER
+======================= */
+.footer {
+  margin-top: auto;
+  background: linear-gradient(135deg, #d79922, #8b4513);
+  color: #fff;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  text-align: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.footer a {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  margin: 0 8px;
+  transition: color 0.3s ease;
+}
+.footer a:hover {
+  color: #ffcc00;
+}
+

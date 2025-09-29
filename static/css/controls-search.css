@@ -1,0 +1,163 @@
+.controls {
+  background: linear-gradient(135deg, var(--ivory) 0%, var(--parchment) 100%);
+  backdrop-filter: blur(18px); /* un peu plus flou pour modernité */
+  border-radius: 25px;
+  padding: 30px 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 12px 40px rgba(113, 66, 20, 0.15);
+  border: 2px solid var(--warm-gold);
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  transition: transform 0.3s ease;
+}
+
+.controls:hover {
+  transform: translateY(-2px);
+}
+
+.search-container {
+  position: relative;
+  flex: 1;
+  min-width: 280px;
+  z-index: 100;
+}
+
+.search-input {
+  width: 100%;
+  padding: 16px 22px;
+  border: 2px solid var(--sage-green);
+  border-radius: 35px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  background: var(--ivory);
+  color: var(--charcoal);
+  font-family: 'Georgia', serif;
+}
+
+.search-input:focus {
+  border-color: var(--heritage-brown);
+  box-shadow: 0 0 0 5px rgba(139, 69, 19, 0.15);
+  transform: translateY(-1px);
+}
+
+.suggestions {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0; right: 0;
+  background: var(--ivory);
+  border-radius: 18px;
+  box-shadow: 0 12px 40px rgba(113, 66, 20, 0.25);
+  max-height: 250px;
+  overflow-y: auto;
+  z-index: 200;
+  display: none;
+  border: 2px solid var(--warm-gold);
+  backdrop-filter: blur(12px);
+}
+
+.suggestion-item {
+  padding: 14px 22px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(218, 165, 32, 0.2);
+  transition: all 0.25s ease;
+  color: var(--charcoal);
+  font-family: 'Georgia', serif;
+  font-weight: 500;
+}
+
+.suggestion-item:hover {
+  background: linear-gradient(90deg, var(--warm-gold), var(--copper));
+  color: var(--ivory);
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(184, 122, 51, 0.2);
+}
+
+/* =======================
+   BOUTONS DYNAMIQUES
+======================= */
+.btn {
+  padding: 15px 28px;
+  border: none;
+  border-radius: 35px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Georgia', serif;
+}
+
+.btn:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, var(--heritage-brown), var(--deep-burgundy));
+  color: var(--ivory);
+  border: 2px solid var(--copper);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--deep-burgundy), var(--heritage-brown));
+}
+
+.btn-secondary {
+  background: linear-gradient(45deg, var(--sage-green), #7A8471);
+  color: var(--ivory);
+  border: 2px solid var(--warm-gold);
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(135deg, #7A8471, var(--sage-green));
+}
+
+.btn-relation-trigger {
+  background: linear-gradient(45deg, var(--copper), #a0522d);
+  color: var(--ivory);
+  border: 2px solid var(--warm-gold);
+}
+
+.btn-relation-trigger:hover {
+  background: linear-gradient(135deg, #a0522d, var(--heritage-brown));
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(184, 122, 51, 0.3);
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
+@media (max-width: 768px) {
+  .controls { flex-direction: column; gap: 15px; padding: 20px; }
+  .search-container { min-width: 100%; }
+  .btn { width: 100%; text-align: center; }
+}
+
+@media (max-width: 480px) {
+  .controls { padding: 15px; }
+  .search-input { font-size: 14px; padding: 12px 18px; }
+  .btn { font-size: 13px; padding: 12px 20px; }
+}
+
+/* =======================
+   Réinitialiser centré
+======================= */
+#reset-view {
+  margin-top: 15px;          /* espace depuis la rangée au-dessus */
+  align-self: center;        /* centrer horizontalement */
+  justify-self: center;      /* au cas où */
+}
+
+/* Sur mobile, il restera centré */
+@media (max-width: 768px) {
+  #reset-view {
+    width: 50%;              /* ou 100% si tu veux plein écran */
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+

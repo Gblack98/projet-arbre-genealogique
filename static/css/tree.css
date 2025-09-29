@@ -1,0 +1,40 @@
+/* =======================
+   TREE & NODES
+======================= */
+.tree-container {
+  background: linear-gradient(135deg, var(--ivory) 0%, var(--parchment) 100%);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 12px 40px rgba(113, 66, 20, 0.15);
+  border: 2px solid var(--warm-gold);
+  overflow: hidden;
+  position: relative;
+}
+
+#tree-svg {
+  width: 100%;
+  height: 80vh;
+  min-height: 600px;
+  background: radial-gradient(ellipse at center, var(--ivory) 0%, var(--parchment) 100%);
+  border-radius: 15px;
+}
+
+.node { cursor: pointer; }
+.node-rect {
+  rx: 12; ry: 12; stroke-width: 3;
+  filter: drop-shadow(3px 3px 8px rgba(113, 66, 20, 0.2));
+  transition: all 0.4s ease;
+}
+.node-rect:hover {
+  transform: scale(1.08);
+}
+.node-text {
+  font-size: 12px;
+  font-weight: 600;
+  text-anchor: middle;
+  fill: var(--charcoal);
+  pointer-events: none;
+  font-family: 'Georgia', serif;
+}
+

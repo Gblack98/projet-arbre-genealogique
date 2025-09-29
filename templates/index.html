@@ -7,13 +7,32 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
+    <style>
+        .dedicace {
+            margin: 40px auto;
+            padding: 20px;
+            max-width: 800px;
+            text-align: center;
+            font-style: italic;
+            color: #444;
+            background: #fafafa;
+            border-left: 4px solid #888;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .dedicace h2 {
+            margin-bottom: 10px;
+            color: #555;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>🌳 Arbre Généalogique</h1>
-            <p>Famille Médor Diop et Seck - Exploration Interactive</p>
-        </div>
+	<div class="header">
+	    <h1>🌳 <span class="highlight-title">Arbre Généalogique</span></h1>
+	    <p class="sub-title">Famille Médor Diop &amp; Seck — Exploration Interactive</p>
+	</div>
+
 
         <div class="controls">
             <div class="search-container">
@@ -26,7 +45,7 @@
             <button id="show-descendants" class="btn btn-primary">Descendants</button>
             <button id="show-all" class="btn btn-secondary">Vue Force</button>
             <button id="show-relation" class="btn btn-relation-trigger">Rechercher Relation</button>
-            <button id="reset-view" class="btn btn-secondary">Réinitialiser</button>
+            <button id="reset-view" class="btn btn-secondary">Unifier</button>
         </div>
 
         <div class="tree-container">
@@ -70,10 +89,27 @@
         </div>
     </div>
 
-    <div class="zoom-controls">
-        <button class="zoom-btn" id="zoom-in">+</button>
-        <button class="zoom-btn" id="zoom-out">−</button>
-    </div>
+	<div class="zoom-controls">
+	    <button class="zoom-btn" id="zoom-in">+</button>
+	    <button class="zoom-btn" id="zoom-out">−</button>
+	    <button class="zoom-btn" id="clear-tree">🗑️</button> 
+	</div>
+
+    <!-- Dédicace -->
+    <section class="dedicace">
+        <div class="dedicace-content">
+            <h2>💐 Dédicace</h2>
+            <p>
+                À la mémoire de ma chère grand-mère 
+                <strong>Binta Yama Seck</strong>, dont la sagesse, la force et 
+                l’amour m’inspirent chaque jour. 
+                <br>Ce site, mon arbre généalogique et mon envie de transmettre 
+                nos racines familiales portent la marque de son héritage. 
+                <br>Elle n’est plus de ce monde, mais mon cœur et mon esprit 
+                pensent à elle toujours, partout, tout le temps.
+            </p>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
@@ -87,117 +123,8 @@
         </div>
     </footer>
 
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-    <script>
-        // ==========================
-        // Gestion du formulaire de relation
-        // ==========================
-        document.getElementById("show-relation").addEventListener("click", () => {
-            document.getElementById("relation-modal").classList.add("active");
-            document.getElementById("overlay").classList.add("active");
-        });
-
-        document.getElementById("close-relation-modal").addEventListener("click", () => {
-            document.getElementById("relation-modal").classList.remove("active");
-            document.getElementById("overlay").classList.remove("active");
-        });
-
-        document.getElementById("cancel-relation").addEventListener("click", () => {
-            document.getElementById("relation-modal").classList.remove("active");
-            document.getElementById("overlay").classList.remove("active");
-        });
-
-        document.getElementById("overlay").addEventListener("click", (event) => {
-            if (event.target === document.getElementById("overlay")) {
-                document.getElementById("relation-modal").classList.remove("active");
-                document.getElementById("info-panel").classList.remove("active");
-                document.getElementById("overlay").classList.remove("active");
-            }
-        });
-
-        // ==========================
-        // Suggestions pour les champs de relation
-        // ==========================
-        function setupRelationSuggestions(inputId, suggestionsId) {
-            const input = document.getElementById(inputId);
-            const suggestions = document.getElementById(suggestionsId);
-
-            input.addEventListener("input", () => {
-                const query = input.value.trim();
-                if (!query) {
-                    suggestions.style.display = "none";
-                    return;
-                }
-
-                fetch(`/api/search?q=${encodeURIComponent(query)}`)
-                    .then(res => res.json())
-                    .then(results => {
-                        suggestions.innerHTML = "";
-                        if (results.length) {
-                            results.forEach(p => {
-                                const div = document.createElement("div");
-                                div.className = "suggestion-item relation";
-                                div.textContent = p.name;
-                                div.addEventListener("click", () => {
-                                    input.value = p.name;
-                                    suggestions.style.display = "none";
-                                });
-                                suggestions.appendChild(div);
-                            });
-                            suggestions.style.display = "block";
-                        } else {
-                            suggestions.style.display = "none";
-                        }
-                    })
-                    .catch(err => {
-                        console.error("Erreur de recherche :", err);
-                        suggestions.style.display = "none";
-                    });
-            });
-
-            document.addEventListener("click", (event) => {
-                if (event.target !== input && !suggestions.contains(event.target)) {
-                    suggestions.style.display = "none";
-                }
-            });
-        }
-
-        // Initialiser les suggestions pour les deux champs
-        setupRelationSuggestions("person1-input", "suggestions1");
-        setupRelationSuggestions("person2-input", "suggestions2");
-
-        // ==========================
-        // Trouver la relation entre deux personnes
-        // ==========================
-        document.getElementById("find-relation").addEventListener("click", () => {
-            const person1 = document.getElementById("person1-input").value.trim();
-            const person2 = document.getElementById("person2-input").value.trim();
-
-            if (!person1 || !person2) {
-                alert("Veuillez entrer les noms des deux personnes.");
-                return;
-            }
-
-            // Fermer le modal
-            document.getElementById("relation-modal").classList.remove("active");
-            document.getElementById("overlay").classList.remove("active");
-
-            // Appeler une nouvelle API pour trouver le chemin entre les deux personnes
-            fetch(`/api/relation-path?person1=${encodeURIComponent(person1)}&person2=${encodeURIComponent(person2)}`)
-                .then(res => {
-                    if (!res.ok) throw new Error("Relation non trouvée");
-                    return res.json();
-                })
-                .then(data => {
-                    // Afficher le graphe de relation
-                    drawForceTree(data);
-                    currentLayout = 'force';
-                })
-                .catch(err => {
-                    console.error("Erreur :", err);
-                    alert("Impossible de trouver une relation entre ces deux personnes.");
-                });
-        });
-    </script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script> 
+    <script src="{{ url_for('static', filename='js/relation-modal.js') }}"></script>
 </body>
 </html>
+

@@ -1,0 +1,594 @@
+/* =======================
+   FONTS & RESET
+======================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =======================
+   VARIABLES
+======================= */
+:root {
+  --heritage-brown: #8B4513;
+  --warm-gold: #DAA520;
+  --sage-green: #9CAF88;
+  --parchment: #F4F1E8;
+  --deep-burgundy: #722F37;
+  --copper: #b87a33;
+  --ivory: #FFFEF7;
+  --charcoal: #36454F;
+  --sepia: #704214;
+}
+
+/* =======================
+   BASE
+======================= */
+body {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  background: linear-gradient(135deg, var(--parchment) 0%, #E8DCC0 50%, var(--sage-green) 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: var(--charcoal);
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23704214' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+  z-index: -1;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+}
+
+/* =======================
+   HEADER
+======================= */
+.header {
+  text-align: center;
+  background: linear-gradient(135deg, var(--ivory) 0%, var(--parchment) 100%);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 40px;
+  margin-bottom: 25px;
+  box-shadow: 0 12px 40px rgba(113, 66, 20, 0.15);
+  border: 2px solid var(--warm-gold);
+  position: relative;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: -2px; left: -2px; right: -2px; bottom: -2px;
+  background: linear-gradient(45deg, var(--warm-gold), var(--copper), var(--heritage-brown));
+  border-radius: 22px;
+  z-index: -1;
+}
+
+.header h1 {
+  font-size: 3em;
+  color: var(--heritage-brown);
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(139, 69, 19, 0.2);
+  font-family: 'Times New Roman', serif;
+}
+
+.header p {
+  color: var(--sepia);
+  font-size: 1.3em;
+  font-style: italic;
+}
+
+/* =======================
+   CONTROLS & SEARCH
+======================= */
+.controls {
+  background: linear-gradient(135deg, var(--ivory) 0%, var(--parchment) 100%);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 8px 32px rgba(113, 66, 20, 0.1);
+  border: 1px solid var(--warm-gold);
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.search-container {
+  position: relative;
+  flex: 1;
+  min-width: 300px;
+  z-index: 100;
+}
+
+.search-input {
+  width: 100%;
+  padding: 15px 20px;
+  border: 2px solid var(--sage-green);
+  border-radius: 30px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+  background: var(--ivory);
+  color: var(--charcoal);
+  font-family: 'Georgia', serif;
+}
+
+.search-input:focus {
+  border-color: var(--heritage-brown);
+  box-shadow: 0 0 0 4px rgba(139, 69, 19, 0.1);
+  transform: translateY(-1px);
+}
+
+.suggestions {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0; right: 0;
+  background: var(--ivory);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(113, 66, 20, 0.2);
+  max-height: 250px;
+  overflow-y: auto;
+  z-index: 200;
+  display: none;
+  border: 1px solid var(--warm-gold);
+  backdrop-filter: blur(10px);
+}
+
+.suggestion-item {
+  padding: 15px 25px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(218, 165, 32, 0.2);
+  transition: all 0.2s ease;
+  color: var(--charcoal);
+  font-family: 'Georgia', serif;
+}
+
+.suggestion-item:hover {
+  background: linear-gradient(90deg, var(--warm-gold), var(--copper));
+  color: var(--ivory);
+  transform: translateX(5px);
+}
+
+/* =======================
+   BUTTONS
+======================= */
+.btn {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 30px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Georgia', serif;
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, var(--heritage-brown), var(--deep-burgundy));
+  color: var(--ivory);
+  border: 2px solid var(--copper);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(139, 69, 19, 0.4);
+}
+
+.btn-secondary {
+  background: linear-gradient(45deg, var(--sage-green), #7A8471);
+  color: var(--ivory);
+  border: 2px solid var(--warm-gold);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+}
+
+/* =======================
+   TREE & NODES
+======================= */
+.tree-container {
+  background: linear-gradient(135deg, var(--ivory) 0%, var(--parchment) 100%);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 12px 40px rgba(113, 66, 20, 0.15);
+  border: 2px solid var(--warm-gold);
+  overflow: hidden;
+  position: relative;
+}
+
+#tree-svg {
+  width: 100%;
+  height: 80vh;
+  min-height: 600px;
+  background: radial-gradient(ellipse at center, var(--ivory) 0%, var(--parchment) 100%);
+  border-radius: 15px;
+}
+
+.node { cursor: pointer; }
+.node-rect {
+  rx: 12; ry: 12; stroke-width: 3;
+  filter: drop-shadow(3px 3px 8px rgba(113, 66, 20, 0.2));
+  transition: all 0.4s ease;
+}
+.node-rect:hover {
+  transform: scale(1.08);
+}
+.node-text {
+  font-size: 12px;
+  font-weight: 600;
+  text-anchor: middle;
+  fill: var(--charcoal);
+  pointer-events: none;
+  font-family: 'Georgia', serif;
+}
+
+/* =======================
+   INFO PANEL & LEGEND
+======================= */
+/* Fond sombre derrière la pop-up */
+.overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  z-index: 999;
+}
+
+/* Info Panel en mode pop-up */
+.info-panel {
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  background: linear-gradient(135deg, var(--ivory) 0%, var(--parchment) 100%);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+  max-width: 400px;
+  width: 90%;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  border: 2px solid var(--warm-gold);
+}
+
+/* Quand c’est actif */
+.info-panel.active {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.overlay.active {
+  display: block;
+}
+
+/* Bouton de fermeture */
+.close-btn {
+  position: absolute;
+  top: 10px; right: 15px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--heritage-brown);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.close-btn:hover {
+  color: var(--deep-burgundy);
+}
+
+
+.legend {
+  position: fixed;
+  bottom: 20px; left: 20px;
+  background: linear-gradient(135deg, var(--ivory) 0%, var(--parchment) 100%);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 30px rgba(113, 66, 20, 0.2);
+  border: 2px solid var(--warm-gold);
+  z-index: 1000;
+}
+
+/* =======================
+   ZOOM BUTTONS
+======================= */
+.zoom-controls {
+  position: fixed;
+  bottom: 20px; right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 1000;
+}
+
+.zoom-btn {
+  width: 55px; height: 55px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--heritage-brown), var(--deep-burgundy));
+  border: 2px solid var(--warm-gold);
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  color: var(--ivory);
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* =======================
+   FOOTER
+======================= */
+.footer {
+  margin-top: auto;
+  background: linear-gradient(135deg, #d79922, #8b4513);
+  color: #fff;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  text-align: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.footer a {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  margin: 0 8px;
+  transition: color 0.3s ease;
+}
+.footer a:hover {
+  color: #ffcc00;
+}
+
+/* =======================
+   RESPONSIVE DESIGN
+======================= */
+@media (max-width: 768px) {
+  .header h1 { font-size: 2.2em; }
+  .controls { flex-direction: column; }
+  .search-container { min-width: 100%; }
+  #tree-svg { height: 60vh; min-height: 350px; }
+  .info-panel {
+    position: relative;
+    right: auto; top: auto;
+    transform: none;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .zoom-controls {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .legend {
+    position: static;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header { padding: 20px; }
+  .header h1 { font-size: 1.8em; }
+  .header p { font-size: 1em; }
+  .btn { padding: 12px 20px; font-size: 12px; }
+  #tree-svg { height: 50vh; min-height: 250px; }
+  .footer p {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+}
+
+/* =======================
+   RELATION MODAL - Harmonisé avec ton thème
+======================= */
+.relation-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    background: linear-gradient(135deg, var(--ivory) 0%, var(--parchment) 100%);
+    border-radius: 25px;
+    padding: 35px;
+    box-shadow: 0 15px 50px rgba(113, 66, 20, 0.3);
+    z-index: 1001;
+    width: 90%;
+    max-width: 520px;
+    border: 3px solid var(--warm-gold);
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: none;
+}
+
+.relation-modal.active {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    display: block;
+}
+
+.relation-modal h3 {
+    text-align: center;
+    color: var(--heritage-brown);
+    margin: 0 0 30px;
+    font-size: 1.8em;
+    font-family: 'Georgia', serif;
+    text-shadow: 1px 1px 3px rgba(139, 69, 19, 0.1);
+}
+
+/* Fermeture */
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--heritage-brown);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.close-modal:hover {
+    color: var(--deep-burgundy);
+    background: rgba(218, 165, 32, 0.1);
+    transform: rotate(90deg);
+}
+
+/* Formulaire */
+.relation-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--sepia);
+    font-size: 1.1em;
+    font-weight: 600;
+    font-family: 'Georgia', serif;
+}
+
+.form-input {
+    width: 100%;
+    padding: 16px 22px;
+    border: 2px solid var(--sage-green);
+    border-radius: 35px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+    background: var(--ivory);
+    color: var(--charcoal);
+    font-family: 'Georgia', serif;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.form-input:focus {
+    border-color: var(--heritage-brown);
+    box-shadow: 0 0 0 4px rgba(139, 69, 19, 0.15), inset 0 2px 5px rgba(0,0,0,0.08);
+    transform: translateY(-2px);
+}
+
+/* Suggestions dans le modal */
+.suggestions.relation {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, var(--ivory) 0%, var(--parchment) 100%);
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(113, 66, 20, 0.25);
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 10;
+    display: none;
+    border: 2px solid var(--warm-gold);
+    backdrop-filter: blur(12px);
+}
+
+.suggestion-item.relation {
+    padding: 14px 25px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(218, 165, 32, 0.2);
+    transition: all 0.25s ease;
+    color: var(--charcoal);
+    font-family: 'Georgia', serif;
+    font-weight: 500;
+}
+
+.suggestion-item.relation:hover {
+    background: linear-gradient(90deg, var(--warm-gold), var(--copper));
+    color: var(--ivory);
+    padding-left: 30px;
+    transform: translateX(3px);
+}
+
+/* Boutons d'action */
+.form-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.btn-relation {
+    padding: 14px 32px;
+    border: none;
+    border-radius: 35px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    font-family: 'Georgia', serif;
+    min-width: 140px;
+}
+
+.btn-submit {
+    background: linear-gradient(45deg, var(--heritage-brown), var(--deep-burgundy));
+    color: var(--ivory);
+    border: 2px solid var(--copper);
+    box-shadow: 0 5px 15px rgba(139, 69, 19, 0.2);
+}
+
+.btn-submit:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(139, 69, 19, 0.35);
+}
+
+.btn-cancel {
+    background: linear-gradient(45deg, #c0392b, #a93226);
+    color: var(--ivory);
+    border: 2px solid #e74c3c;
+    box-shadow: 0 5px 15px rgba(192, 57, 43, 0.2);
+}
+
+.btn-cancel:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(192, 57, 43, 0.35);
+}
+
+/* Bouton "Rechercher Relation" dans la barre de contrôle */
+.btn-relation-trigger {
+    background: linear-gradient(45deg, var(--copper), #a0522d);
+    color: var(--ivory);
+    border: 2px solid var(--warm-gold);
+    box-shadow: 0 5px 15px rgba(184, 122, 51, 0.25);
+}
+
+.btn-relation-trigger:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(184, 122, 51, 0.4);
+    background: linear-gradient(45deg, #a0522d, var(--heritage-brown));
+}

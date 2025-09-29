@@ -1,0 +1,23 @@
+/* =======================
+   ZOOM BUTTONS
+======================= */
+.zoom-controls {
+  position: fixed;
+  bottom: 20px; right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 1000;
+}
+
+.zoom-btn {
+  width: 55px; height: 55px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--heritage-brown), var(--deep-burgundy));
+  border: 2px solid var(--warm-gold);
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  color: var(--ivory);
+  display: flex; align-items: center; justify-content: center;
+}

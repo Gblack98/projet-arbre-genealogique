@@ -380,12 +380,12 @@
                 "Mame Diarra Diop",
                 "Ndeye Betty Diop",
                 "Amadou Diop",
-                "Amadou Bamba Diop (Fils de Badara)",
+                "Amadou Bamba Diop (Badara)",
                 "Ndeye Salimata Diop",
                 "Seynabou Diop",
                 "Lissong Diop",
                 "Gabar Birame Medor Diop",
-                "Ibrahima Gabar Diop (fils de Badara)",
+                "Ibrahima Gabar Diop (Badara)",
                 "Saliou Sady Faza Diop",
                 "El Hadji Malick Diop",
                 "Yacine Diop",
@@ -413,7 +413,7 @@
             "parents": [],
             "enfants": [
             	"Amadou Diop",
-                "Amadou Bamba Diop (Fils de Badara)",
+                "Amadou Bamba Diop (Badara)",
                 "Ndeye Salimata Diop",
                 "Seynabou Diop"
                 ],
@@ -426,7 +426,7 @@
             "enfants": [
            	    "Lissong Diop",
                 "Gabar Birame Medor Diop",
-                "Ibrahima Gabar Diop (fils de Badara)",
+                "Ibrahima Gabar Diop (Badara)",
                 "Saliou Sady Faza Diop",
                 "El Hadji Malick Diop",
                 "Yacine Diop",
@@ -465,7 +465,7 @@
             "conjoints": []
         },
         {
-            "name": "Amadou Bamba Diop (Fils de Badara)",
+            "name": "Amadou Bamba Diop (Badara)",
             "genre": "Homme",
             "parents": [
                 "Alioune Badara Gabar Diop",
@@ -794,14 +794,24 @@
             "name": "Binta Yama Seck",
             "genre": "Femme",
             "parents": ["Mar Seck","Marième Ndiaye"],
-            "enfants": [],
-            "conjoints": []
+            "enfants": ["Diarietou Diagne",
+            		"Mamadou Yatma Diagne",
+            		"Mame Aida Diagne",
+            		"Tidiane Diagne",
+            		"Idrissa Diagne",
+            		"Oulimata Diagne",
+            		"Madjiguene Diagne",
+            		"Nafissatou Diagne",
+            		"Pape Mar Diagne",
+            		"Moussa Diagne"
+            	       ],
+            "conjoints": ["Mamadou Diagne","Makhtar Diagne"]
         },
         {
             "name": "Nafissatou Seck",
             "genre": "Femme",
             "parents": ["Mar Seck","Marième Ndiaye"],
-            "enfants": [],
+            "enfants": ["Magatte Diop"],
             "conjoints": []
         },
         {

@@ -1,0 +1,65 @@
+/* =======================
+   HEADER MODERNE
+======================= */
+.header {
+  text-align: center;
+  background: linear-gradient(135deg, var(--ivory) 0%, var(--parchment) 60%, var(--sage-green) 100%);
+  backdrop-filter: blur(15px);
+  border-radius: 25px;
+  padding: 45px 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 15px 50px rgba(113, 66, 20, 0.2), 0 0 15px rgba(255, 215, 0, 0.05);
+  border: 2px solid var(--warm-gold);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+/* léger effet de mouvement du fond */
+.header::before {
+  content: '';
+  position: absolute;
+  top: -2px; left: -2px; right: -2px; bottom: -2px;
+  background: linear-gradient(45deg, var(--warm-gold), var(--copper), var(--heritage-brown));
+  border-radius: 27px;
+  z-index: -1;
+  filter: blur(4px);
+  opacity: 0.9;
+  transform: scale(1.05);
+  animation: pulse-bg 10s ease-in-out infinite alternate;
+}
+
+@keyframes pulse-bg {
+  0% { transform: scale(1.05) rotate(0deg); opacity: 0.9; }
+  50% { transform: scale(1.08) rotate(2deg); opacity: 0.95; }
+  100% { transform: scale(1.05) rotate(0deg); opacity: 0.9; }
+}
+
+.header h1 {
+  font-size: 3.2em;
+  color: var(--deep-burgundy);
+  margin-bottom: 12px;
+  font-weight: 700;
+  text-shadow: 2px 2px 8px rgba(139, 69, 19, 0.3);
+  font-family: 'Georgia', serif;
+  transition: all 0.3s ease;
+}
+
+.header h1:hover {
+  transform: scale(1.05);
+  text-shadow: 2px 2px 12px rgba(139, 69, 19, 0.5);
+}
+
+.header p {
+  color: var(--heritage-brown);
+  font-size: 1.4em;
+  font-style: italic;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 3px rgba(139, 69, 19, 0.1);
+  transition: color 0.3s ease;
+}
+
+.header p:hover {
+  color: var(--deep-burgundy);
+}
+
